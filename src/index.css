@@ -1,5 +1,14 @@
 body {
-  margin: 0;
+  margin: 1em;
   padding: 0;
   font-family: sans-serif;
+  background-color: rgb(0, 255, 255);
+}
+
+button {
+    padding: 10px 10px;
+}
+
+.Time {
+    padding-top: 10px;
 }
