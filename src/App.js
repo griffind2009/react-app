@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import Welcome from './Welcome.js';
 import Clock from './Time.js';
+import Form from './Form.js';
 //import './App.css';
 
 class App extends Component {
  constructor(props){
  super(props)
  this.handleClick = this.handleClick.bind(this)
- this.submitClick = this.submitClick.bind(this)
+ this.handleClockClick = this.handleClockClick.bind(this)
  }
+ 
       handleClick(e) {
         e.preventDefault()
         alert("clicked")
@@ -16,7 +18,7 @@ class App extends Component {
         document.getElementsByClassName('first-app')[0].style.color = "blue";
         document.getElementsByClassName('first-app')[0].innerHTML = "This is blue";
     }
-     submitClick(e) {
+     handleClockClick(e) {
          e.preventDefault()
          var d = new Date()
 //         document.getElementsByClassName('clock')[0].innerHTML = d.toLocaleDateString();
@@ -38,9 +40,10 @@ class App extends Component {
             <button onClick={this.handleClick}>Submit</button>
       </div>
     <div className="Time">
-        <button onClick={this.submitClick}>Click to Display Time</button>
+        <button onClick={this.handleClockClick}>Click to Display Time</button>
         <p className="clock"></p>
-        <Clock date={new Date()} /> 
+        <Clock /> 
+        <Form />
     </div>
     </div>
     );
